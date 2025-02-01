@@ -121,10 +121,6 @@ estoque/
    - Na página inicial, clique em "Verificar Estoque Baixo".
    - Defina um limite e veja os produtos com estoque abaixo desse valor.
 
-6. **Dashboard de Métricas**:
-   - Na página inicial, clique em "Dashboard".
-   - Visualize métricas importantes sobre o estoque.
-
 ## Tecnologias Utilizadas
 
 - **Python**: Linguagem de programação principal.
