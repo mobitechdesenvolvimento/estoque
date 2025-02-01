@@ -1,0 +1,66 @@
+{% extends "base.html" %} {% block content %}
+<div class="container my-5">
+  <div class="text-center mb-5">
+    <h1 class="display-4 fw-bold">Bem-vindo ao Sistema de Gestão de Estoque</h1>
+    <p class="lead text-muted">
+      Gerencie seus produtos de forma simples e eficiente.
+    </p>
+  </div>
+
+  <div class="row g-4">
+    <!-- Card: Adicionar Produto -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body text-center">
+          <i class="bi bi-plus-circle-fill text-primary fs-1 mb-3"></i>
+          <h3 class="card-title">Adicionar Produto</h3>
+          <p class="card-text text-muted">
+            Adicione novos produtos ao estoque com nome, quantidade e preço.
+          </p>
+          <a
+            href="{{ url_for('adicionar_produto') }}"
+            class="btn btn-primary btn-lg"
+            >Adicionar</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Card: Listar Produtos -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body text-center">
+          <i class="bi bi-list-ul text-success fs-1 mb-3"></i>
+          <h3 class="card-title">Listar Produtos</h3>
+          <p class="card-text text-muted">
+            Veja todos os produtos cadastrados no sistema.
+          </p>
+          <a
+            href="{{ url_for('listar_produtos') }}"
+            class="btn btn-success btn-lg"
+            >Listar</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Card: Verificar Estoque Baixo -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body text-center">
+          <i class="bi bi-exclamation-triangle-fill text-warning fs-1 mb-3"></i>
+          <h3 class="card-title">Estoque Baixo</h3>
+          <p class="card-text text-muted">
+            Verifique produtos com quantidade abaixo do limite.
+          </p>
+          <a
+            href="{{ url_for('verificar_estoque_baixo') }}"
+            class="btn btn-warning btn-lg"
+            >Verificar</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
